@@ -468,7 +468,7 @@ Try this route: `http://localhost:3000/hello/schmitty?human=true`
 
 <br />
 
-&#x1F535; ** LAB 4 - YOU DO: 5 minutes**
+&#x1F535; **LAB 4 - YOU DO: 5 minutes**
 
 1. Build a route at `/favorite/:noun` where `:noun` can be any favorite 'thing' (e.g. - color, food, song, movie, jeans)
 
