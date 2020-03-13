@@ -344,12 +344,12 @@ app.get('/:name', function(req, res){
     ...
 });
 
-app.get('/greeting', function(req, res){
+app.get('/:food', function(req, res){
     ...
 });
 ```
 
-and you send a request to the URL `http://localhost:3000/greeting` which route will Express think you want? In this example, you want to make sure your "wildcard" `/:name` route comes **AFTER** `/greeting` so that Express will pattern match these correctly.
+and you send a request to the URL `http://localhost:3000/pizza` which route will Express think you want? In this example, you want to make sure your "wildcard" `/:name` route comes **AFTER** `/:food` so that Express will pattern match these correctly.
 
 <br />
 
