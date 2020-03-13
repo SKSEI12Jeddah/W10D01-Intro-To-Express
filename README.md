@@ -246,7 +246,7 @@ We just built the foundation for our server and for your first web application!
 
 <br />
 
-&#x1F535; **YOU DO - Team Lab (15 minutes)**
+&#x1F535; **LAB 1 - YOU DO - (15 minutes)**
 
 Remember: We are here and you can still ask questions! Spend the next 15 minutes on this exercise.
 
@@ -324,7 +324,7 @@ Try this URL: `http://localhost:3000/schmitty`. What is returned?
 <br />
 
 
-&#x1F535; **YOU DO: 5 minutes** 
+&#x1F535; **LAB 2 - YOU DO: 5 minutes** 
 
 1. Create a route that uses 'food' as a parameter
 2. The route should return a string that includes the food (e.g.- "I really love pizza").
@@ -406,7 +406,7 @@ You actually use query parameters all the time on Amazon, Ebay, Airbnb, etc. - a
 
 <br />
 
-&#x1F535; **YOU DO: 20 minutes**
+&#x1F535; **LAB 3 - YOU DO: 20 minutes**
 
 1. Write a route at `/sightings` that takes a query parameter of `state` and `sights` and responds with an object that looks like this:
 
@@ -468,7 +468,7 @@ Try this route: `http://localhost:3000/hello/schmitty?human=true`
 
 <br />
 
-&#x1F535; **YOU DO: 5 minutes**
+&#x1F535; ** LAB 4 - YOU DO: 5 minutes**
 
 1. Build a route at `/favorite/:noun` where `:noun` can be any favorite 'thing' (e.g. - color, food, song, movie, jeans)
 
@@ -513,7 +513,7 @@ and you send a request to the URL `http://localhost:3000/greeting` which route w
 
 <br />
 
-## Lab Time
+## Lab 5
 
 1. Make routes for  `add, subtract, multiply, divide` that will take two numbers as query parameters `num1` and `num2` and perform the operation specified in the route and send those answers to the browser.
 
