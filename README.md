@@ -405,10 +405,10 @@ A `console.log()` of our query parameters would look something like this:
 }
 ```
 
-Let's make our `/:name` route more dynamic by adding a 'first_name' query parameter!
+Let's make our `/hello/:name` route more dynamic by adding a 'first_name' query parameter!
 
 ```javascript
-app.get("/:name", function(req, res){
+app.get("/hello/:name", function(req, res){
   console.log(req.params);
   console.log(req.route);
   console.log(req.query);
@@ -418,12 +418,12 @@ app.get("/:name", function(req, res){
 });
 ```
 
-**Try this example:** `http://localhost:3000/schmitty?first_name=jamie`
+**Try this example:** `http://localhost:3000/hello/schmitty?first_name=jamie`
 
 If we wanted to be formal, we could add a 2nd query parameter of 'last_name':
 
 ```javascript
-app.get("/:name", function(req, res){
+app.get("/hello/:name", function(req, res){
   console.log(req.params);
   console.log(req.route);
   console.log(req.query);
@@ -432,7 +432,7 @@ app.get("/:name", function(req, res){
 });
 ```
 
-**Try this example:** `http://localhost:3000/schmitty?first_name=jamie&last_name=king`
+**Try this example:** `http://localhost:3000/hello/schmitty?first_name=jamie&last_name=king`
 
 <br />
 
