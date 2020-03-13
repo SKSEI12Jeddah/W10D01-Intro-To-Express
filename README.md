@@ -333,6 +333,44 @@ Did anyone run into any issues?
 
 <br />
 
+## Order Matters
+
+Keep in mind that when Express receives a request, it checks each route in order until it finds a pattern match. 
+
+For example, if you order your routes like this:
+
+```javascript
+app.get('/:name', function(req, res){
+    ...
+});
+
+app.get('/greeting', function(req, res){
+    ...
+});
+```
+
+and you send a request to the URL `http://localhost:3000/greeting` which route will Express think you want? In this example, you want to make sure your "wildcard" `/:name` route comes **AFTER** `/greeting` so that Express will pattern match these correctly.
+
+<br />
+
+## Dynamic Segments
+
+We do have another way that isn't one that we have previously discussed.  We often use dynamic segments and query parameters. For example:
+
+    /hello/:name?human=true
+    
+What would this route look like?    
+
+```javascript
+app.get('/hello/:name', function(req, res) {
+  res.send({params: req.params, queries: req.query});
+});
+```
+
+Try this route: `http://localhost:3000/hello/schmitty?human=true`
+
+<br />
+
 ### Why are params important?
 
 Eventually, we will use "wildcard" params to grab specific information from our app. For example, if we were building a Facebook replica, and we wanted to grab a specific friend of a specific user, we might build a route that looks like this:
@@ -450,23 +488,6 @@ app.get('/bigfoot', function(req, res){
 
 <br />
 
-## Dynamic Segments
-
-We do have another way that isn't one that we have previously discussed.  We often use dynamic segments and query parameters. For example:
-
-    /hello/:name?human=true
-    
-What would this route look like?    
-
-```javascript
-app.get('/hello/:name', function(req, res) {
-  res.send({params: req.params, queries: req.query});
-});
-```
-
-Try this route: `http://localhost:3000/hello/schmitty?human=true`
-
-<br />
 
 &#x1F535; **LAB 4 - YOU DO: 5 minutes**
 
@@ -493,25 +514,6 @@ app.get('/favorite/:noun', function(req, res) {
 
 <br />
 
-## Order Matters
-
-Keep in mind that when Express receives a request, it checks each route in order until it finds a pattern match. 
-
-For example, if you order your routes like this:
-
-```javascript
-app.get('/:name', function(req, res){
-    ...
-});
-
-app.get('/greeting', function(req, res){
-    ...
-});
-```
-
-and you send a request to the URL `http://localhost:3000/greeting` which route will Express think you want? In this example, you want to make sure your "wildcard" `/:name` route comes **AFTER** `/greeting` so that Express will pattern match these correctly.
-
-<br />
 
 ## Lab 5
 
